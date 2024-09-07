@@ -2,7 +2,7 @@ import { ref } from "vue";
 import axios from "axios";
 
 export default function usePhotos() {
-  const UNSPLASH_API_URL = "https://api.unsplash.com/photos";
+  const UNSPLASH_API_URL = "https://ai.unsplash.com/photos";
 
   interface Photo {
     id: string;
@@ -41,6 +41,7 @@ export default function usePhotos() {
       page.value++;
     } catch (error) {
       console.error("Error fetching photos:", error);
+      throw new Error("Error fetching photos");
     } finally {
       loading.value = false;
     }

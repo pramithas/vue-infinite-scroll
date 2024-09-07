@@ -27,19 +27,4 @@ const props = defineProps({
             </v-row>
         </v-container>
     </v-card>
-
-
-
 </template>
-
-
-<style scoped>
-.image-container {
-    padding: 20px;
-    width: 350px;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-    background-color: #f0f0f0;
-}
-</style>
