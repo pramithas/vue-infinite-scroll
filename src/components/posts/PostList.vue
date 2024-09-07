@@ -4,6 +4,10 @@
       <v-col v-for="photo in photos" :key="photo.id" cols="4">
         <Post :photo="photo" :loading="loading" :noMorePhotos="noMorePhotos" />
       </v-col>
+      <v-col v-for="n in 10" cols="4" v-if="loading">
+        <v-skeleton-loader :key="n" :loading="loading" height="240"
+          type="image, list-item-two-line"></v-skeleton-loader>
+      </v-col>
     </v-row>
   </InfiniteScroller>
 </template>
