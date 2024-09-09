@@ -14,9 +14,9 @@ const props = defineProps({
             <v-row>
                 <v-col cols="12">
                     <v-responsive>
-                        <v-img :src="props.photo?.urls.small" class="rounded-lg mb-2" height="184" width="500"
+                        <v-img :src="props.photo?.urls?.small" class="rounded-lg mb-2" height="184" width="500"
                             cover></v-img>
-                        <v-list-item :subtitle="props.photo?.user.name"
+                        <v-list-item :subtitle="props.photo?.user?.name"
                             :title="props.photo?.description || props.photo?.alt_description"
                             class="px-0"></v-list-item>
                     </v-responsive>
