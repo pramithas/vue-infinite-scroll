@@ -2,7 +2,7 @@ import { ref } from "vue";
 import axios from "axios";
 
 export default function usePhotos() {
-  const UNSPLASH_API_URL = "https://ai.unsplash.com/photos";
+  const UNSPLASH_API_URL = "https://api.unsplash.com/photos";
 
   interface Photo {
     id: string;
