@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-const props = defineProps({
+const postProps = defineProps({
     photo: Object,
     loading: Boolean,
     noMorePhotos: Boolean

@@ -19,7 +19,7 @@ export default function usePhotos() {
   const page = ref(1);
   const loading = ref(false);
   const noMorePhotos = ref(false);
-  const limit = 10;
+  const limit = 9;
 
   const fetchPhotos = async () => {
     if (loading.value || noMorePhotos.value) return;
