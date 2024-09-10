@@ -14,14 +14,18 @@ const postProps = defineProps({
             <v-row>
                 <v-col cols="12">
                     <v-responsive>
-                        <v-img :src="props.photo?.urls?.small" class="rounded-lg mb-2" height="184" width="500"
-                            cover></v-img>
-                        <v-list-item :subtitle="props.photo?.user?.name"
-                            :title="props.photo?.description || props.photo?.alt_description"
-                            class="px-0"></v-list-item>
+                        <v-tooltip :text="postProps.photo?.alt_description" location="bottom">
+                            <template v-slot:activator="{ props }">
+                                <v-img :src="postProps.photo?.urls?.small" v-bind="props"
+                                    class="rounded-lg mb-2" height="320" cover></v-img>
+                                <v-list-item :subtitle="postProps.photo?.user?.name"
+                                    :title="postProps.photo?.description || postProps.photo?.alt_description"
+                                    class="px-0"></v-list-item>
+                            </template>
+                        </v-tooltip>
                     </v-responsive>
                 </v-col>
-                <v-col cols="12" v-if="!props.loading && props.noMorePhotos">
+                <v-col cols="12" v-if="!postProps.loading && postProps.noMorePhotos">
                     <v-alert type="info">No more photos to load.</v-alert>
                 </v-col>
             </v-row>
